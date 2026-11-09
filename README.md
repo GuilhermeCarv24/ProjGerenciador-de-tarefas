@@ -1,78 +1,111 @@
-# 📝 Gerenciador de Tarefas
+# 🚀 TaskFlow V2 — Gerenciador de Tarefas
 
-Um gerenciador de tarefas desenvolvido em **Python**, com interface via terminal, que permite adicionar, visualizar, concluir e remover tarefas de maneira simples e organizada.
+Um gerenciador de tarefas desenvolvido em **Python**, com interface gráfica utilizando **Tkinter**, projetado para facilitar a organização e o acompanhamento de atividades do dia a dia.
 
-O projeto foi desenvolvido com o objetivo de praticar conceitos fundamentais de programação, manipulação de dados e persistência de informações utilizando arquivos JSON.
+O TaskFlow evoluiu de uma aplicação executada pelo terminal para uma aplicação desktop com interface visual, permitindo gerenciar tarefas de maneira mais intuitiva e organizada.
 
-## 🚀 Funcionalidades
+## ✨ Funcionalidades
 
-- **Adicionar tarefas:** permite cadastrar novas tarefas.
-- **Listar tarefas:** exibe todas as tarefas cadastradas.
-- **Concluir tarefas:** permite marcar tarefas como concluídas.
-- **Remover tarefas:** possibilita excluir tarefas da lista.
-- **Salvar automaticamente ao sair:** armazena as informações em um arquivo JSON para que permaneçam disponíveis na próxima execução.
+- **Cadastro de tarefas:** crie tarefas com título e descrição.
+- **Categorias:** organize atividades entre Pessoal, Estudos, Trabalho, Lazer e Outros.
+- **Prioridades:** classifique tarefas como Baixa, Média ou Alta.
+- **Prazos:** defina datas para suas atividades.
+- **Conclusão de tarefas:** marque atividades como concluídas.
+- **Reabertura:** recupere tarefas já concluídas.
+- **Exclusão:** remova tarefas com confirmação.
+- **Painel de acompanhamento:** visualize estatísticas das tarefas.
+- **Persistência de dados:** as informações são armazenadas em JSON, permanecendo disponíveis ao reabrir o programa.
 
 ## 🛠️ Tecnologias utilizadas
 
-- **Python 3** — Linguagem utilizada no desenvolvimento.
+- **Python 3** — Linguagem principal.
+- **Tkinter** — Desenvolvimento da interface gráfica.
 - **JSON** — Armazenamento e persistência dos dados.
-- **Biblioteca `os`** — Verificação da existência do arquivo de dados.
+- **Git e GitHub** — Versionamento e hospedagem do projeto.
 
 ## 📂 Estrutura do projeto
 
 ```text
-Gerenciador-de-Tarefas/
+ProjGerenciador-de-tarefas/
 │
 ├── main.py
-├── Tasks.json
-└── README.md
+├── gerenciador.py
+├── README.md
+├── .gitignore
+│
+├── models/
+│   └── tarefa.py
+│
+├── storage/
+│   └── armazenamento.py
+│
+├── ui/
+│   ├── janela_principal.py
+│   └── janela_cadastro.py
+│
+├── services/
+│
+└── data/
+    └── tarefas.json
 ```
 
-> O arquivo `Tasks.json` é criado automaticamente quando as tarefas são salvas pela primeira vez.
+> O arquivo `tarefas.json` é criado automaticamente durante a utilização do programa, quando necessário. Os dados locais são ignorados pelo Git.
 
 ## ⚙️ Como executar
 
 **1. Clone o repositório:**
 
 ```bash
-git clone URL_DO_SEU_REPOSITORIO
+git clone https://github.com/GuilhermeCarv24/ProjGerenciador-de-tarefas.git
 ```
 
 **2. Entre na pasta do projeto:**
 
 ```bash
-cd Gerenciador-de-Tarefas
+cd ProjGerenciador-de-tarefas
 ```
 
-**3. Execute o programa:**
+**3. Execute a aplicação:**
 
 ```bash
 python main.py
 ```
 
-Não é necessário instalar bibliotecas externas, pois o projeto utiliza apenas módulos nativos do Python.
+Não é necessário instalar bibliotecas externas. O projeto utiliza recursos nativos do Python.
 
-## 💻 Funcionamento
+## 🖥️ Interface e funcionamento
 
-Ao executar o programa, será apresentado um menu interativo no terminal:
+O TaskFlow V2 possui uma interface gráfica desenvolvida com Tkinter, com painel principal para acompanhamento das tarefas e uma janela específica para cadastrar novas atividades.
 
-```text
-=== GERENCIADOR DE TAREFAS ===
+O programa permite organizar compromissos, acompanhar prioridades, controlar prazos e atualizar o status das atividades.
 
-1. Adicionar tarefa
-2. Listar tarefas
-3. Marcar como concluída
-4. Remover tarefa
-5. Sair
+## 📌 Evolução do projeto
 
-Escolha uma opção:
-```
-
-O usuário pode escolher uma das opções para gerenciar suas tarefas.
+- **V1:** primeira versão executada pelo terminal, com funcionalidades básicas de gerenciamento de tarefas.
+- **V2:** reformulação da aplicação com interface gráfica, organização em módulos, cadastro detalhado e armazenamento em JSON.
+- **V3:** melhorias planejadas para ampliar a navegação e a organização das tarefas.
 
 ## 📚 Aprendizados
 
-Durante o desenvolvimento deste projeto, foram trabalhados conceitos importantes:
+Durante o desenvolvimento, foram trabalhados conceitos importantes:
 
-- Criação e utilização de funções.
-- Manip
+- Programação orientada a objetos.
+- Organização de projetos em módulos.
+- Desenvolvimento de interfaces gráficas.
+- Manipulação de arquivos JSON.
+- Persistência de dados.
+- Tratamento de informações e validações.
+- Versionamento de código com Git.
+
+## 👨‍💻 Desenvolvedor
+
+**Guilherme Carvalho**
+
+Estudante de Engenharia de Software e desenvolvedor em formação.
+
+- GitHub: [GuilhermeCarv24](https://github.com/GuilhermeCarv24)
+- Repositório: [ProjGerenciador-de-tarefas](https://github.com/GuilhermeCarv24/ProjGerenciador-de-tarefas)
+
+---
+
+*Projeto desenvolvido para fins de aprendizado e evolução prática em desenvolvimento de software.*
